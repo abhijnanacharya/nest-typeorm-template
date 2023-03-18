@@ -21,7 +21,13 @@ export class UserService {
   }
 
   async create(user: User): Promise<User> {
-    return this.userRepository.save(user);
+    const newUser = new User();
+    newUser.firstName = user.firstName;
+    newUser.lastName = user.lastName;
+    newUser.email = user.email;
+    newUser.password = user.password;
+    newUser.createdAt = parseInt(new Date().toISOString());
+    return this.userRepository.save(newUser);
   }
 
   async update(id: number, user: User): Promise<User> {
