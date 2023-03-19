@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindOneOptions, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { User } from './entity/user.entity';
 
 @Injectable()
@@ -38,6 +38,7 @@ export class UserService {
   }
 
   async delete(id: number): Promise<void> {
+    console.log('Helloooooo!!!!');
     await this.userRepository.delete(id);
   }
 }
