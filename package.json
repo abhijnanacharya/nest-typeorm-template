@@ -22,8 +22,9 @@
     "migration:generate": "npm run typeorm -- migration:generate",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm --migration:revert",
-    "migration:run-fake":"npm run typeorm migration:run --fake",
-    "migration:revert-fake":"npm run typeorm migration:revert --fake"
+    "migration:run-fake": "npm run typeorm migration:run --fake",
+    "migration:revert-fake": "npm run typeorm migration:revert --fake",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -50,7 +51,9 @@
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.0",
     "jest": "29.3.1",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
     "supertest": "^6.1.3",
