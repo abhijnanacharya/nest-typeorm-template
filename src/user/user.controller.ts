@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from './entity/user.entity';
 
@@ -26,13 +18,11 @@ export class UserController {
 
   @Post()
   create(@Body() user: User): Promise<User> {
-    console.log('hello world');
     return this.usersService.create(user);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() user: User): Promise<User> {
-    console.log('hello!!');
     return this.usersService.update(Number(id), user);
   }
 
