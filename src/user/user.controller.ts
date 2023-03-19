@@ -32,6 +32,7 @@ export class UserController {
 
   @Put(':id')
   update(@Param('id') id: string, @Body() user: User): Promise<User> {
+    console.log('hello!!');
     return this.usersService.update(Number(id), user);
   }
 
