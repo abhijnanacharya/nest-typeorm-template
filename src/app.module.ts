@@ -10,6 +10,4 @@ import { dataSourceOptions } from 'db/data-source';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {
-  // constructor(private dataSource: DataSource) {}
-}
+export class AppModule {}

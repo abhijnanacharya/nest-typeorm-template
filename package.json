@@ -79,5 +79,8 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "husky":{
+    "pre-commit": "prettier --write . && git add -A ."
   }
 }
